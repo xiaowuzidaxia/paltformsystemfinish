@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <title>login</title>
+        <script type="text/javascript" src="/static/js/jquery-1.8.2.min.js"></script>
+</head>
+<body>
+
+<h1>wuzi</h1>
+<input type="button"  value="退出" onclick="click1();" />
+<b><a href="/dev/U/deletesession/"  >退出登录<span></span></a></b>
+<img src="http://192.168.1.114:8080/down/car.jpg">
+<br>
+<input type="button" onclick="click2();" id="showPic1" value="显示图片1">
+<input type="button" onclick="click3();" id="showPic2" value="显示图片">
+<a href="/ws"><p>跳转到websocket</p></a>
+<a href="/wstest" target="_black"><p>跳转到wstest</p></a>
+<img id="img1" />
+<img id="img2" />
+<script type="text/javascript">
+        function click1(){
+                $.ajax({
+                        url:"/deletesession/",
+                        type:"get",
+                        success:function(argv){
+                                console.log(argv+"ok")
+                        }
+                })
+        }
+        function click2(){
+              $.ajax({
+                    url:"/getimage1/",
+                    type:"get",
+                    success:function(argv){
+                            console.log(argv)
+                            $("#img1").attr("src",argv)
+                    }
+            })
+        }
+        function click3(){
+              $.ajax({
+                    url:"/getimage/",
+                    type:"get",
+                    success:function(argv){
+                            console.log(argv)
+                            $("#img2").attr("src",argv)
+                    }
+            })
+        }
+    
+</script>
+</body>
+</html>

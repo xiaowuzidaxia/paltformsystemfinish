@@ -1,0 +1,31 @@
+﻿<div style="font-size:16px">
+    <label>速度等级&nbsp;</label>
+     <select id="devspeedid" onchange="appdevspeedbtnfun()">
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+    </select>
+    <input id="operatecheckbox" type="checkbox" checked="checked" onclick="appusercontroldevbtnfun()">
+    <span>是否干预操作</span>
+    <br /><br />
+    <button class="btn btn-sm btn-info miconbtn" id="drawbtnid" onclick="drawclickfun('connector')">
+        <span class="glyphicon glyphicon-pencil">&nbsp;画'角码'</span>
+    </button>
+    <button class="btn btn-sm btn-danger miconbtn" id="deldrawbtnid" onclick="deletefun('connector')">
+        <span class="glyphicon glyphicon-trash">&nbsp;删'角码'</span>
+    </button>
+    <span style="margin-left:50px;"></span>
+    <button class="btn btn-success btn-sm miconbtn" id="devrunbtnid" title="运行" onclick="appdevrunbtnfun(gAppScrewDevtype)">
+        <span class="glyphicon glyphicon-play">&nbsp;运行</span>
+    </button>
+    <button class="btn btn-danger btn-sm miconbtn" id="devstoprunbtnid" title="急停" onclick="appdevstoprunbtnfun()">
+        <span class="glyphicon glyphicon glyphicon-stop">&nbsp;急停</span>
+    </button>
+    <canvas class="drawcanvas" id="canvas">
+        浏览器不支持哦，亲
+    </canvas>
+
+    <canvas class="drawcanvas" style="z-index: 1;" id="canvas_bak"></canvas>
+</div>

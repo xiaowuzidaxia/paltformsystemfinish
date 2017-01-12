@@ -1,0 +1,35 @@
+.drawcanvas {   
+	border-width: 1px;    
+	border-style: solid;    
+	border-color: rgba(20, 126, 239, 0.50);
+	position: absolute;
+	z-index : 0;
+	left:7px;
+	top:105px;
+} 
+
+#operatecheckbox
+{
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    margin-left:50px; 
+    margin-top:-2px;
+    vertical-align:middle; 
+}
+
+.clickedappbtn{
+	background-color: #999999;
+}
+
+.clickedappbtn:hover {
+    background-color: #666666;
+}
+
+.clickedappbtn:focus {
+    background-color: #888888;
+}
+
+.clickedappbtn:active {
+    background-color: #666666;
+}

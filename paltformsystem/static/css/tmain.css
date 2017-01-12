@@ -1,0 +1,46 @@
+﻿.suc{
+	color:green;
+    font-size: 14px;
+    text-align:center;
+}
+
+.fail{
+	color:red;
+    font-size: 14px;
+    text-align:center;
+}
+
+.miconbtn{
+	margin-right:5px;
+	font-size: 14px;
+}
+body{
+	font-size:14px;
+}
+#main-nav-container {
+    font-size: 14pt;
+}
+.girda{
+    cursor: default; 
+    background: rgb(220, 240, 241);
+}
+.gridtitle{
+    cursor: pointer; 
+    background: rgb(240, 240, 240); 
+    text-align:center; 
+    border-radius:5px 5px 0 0;
+}
+.normal{
+    background: rgb(96, 181, 96);
+}
+.unnormal{
+    background: rgb(220, 7, 7);
+}
+.gridimg{
+    height:50px; 
+    width:100px;
+}
+.tableimg{
+    height:25px; 
+    width:80px;
+}

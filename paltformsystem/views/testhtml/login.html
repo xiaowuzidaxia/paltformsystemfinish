@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <title>login</title>
+</head>
+<body>
+<form method="POST" action="/dev/U/uishow/">
+        
+        <input type="text" name="companyname" placeholder="公司名称" />
+        <br/>
+        <input type="text" name="username" placeholder="用户名" />
+        <br/>
+        <input type="password" name="password" />
+        <br/>
+        <input type="submit" value="登录" name="loginSubmit">
+        <p>{{.msg}}</p>
+</form>
+<a href="/dev/U/resetpassword/"><button>重置密码</button> </a>
+</body>
+</html>

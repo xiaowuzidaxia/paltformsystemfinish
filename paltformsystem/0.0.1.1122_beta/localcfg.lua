@@ -1,0 +1,5 @@
+ServerURL = "http://192.168.1.79/"
+CompanyName = "hangzhou"
+UserName = "xiao"
+Password = "12345"
+DeviceID = "20161001"

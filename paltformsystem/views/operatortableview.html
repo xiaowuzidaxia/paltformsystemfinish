@@ -1,0 +1,151 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>朗群智能设备：操作</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/static/css/tmain.css" rel="stylesheet" />
+    <script src="/static/js/jquery-2.1.3.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+    <script src="/static/js/operatorview.js"></script>
+    <style type="text/css">
+        
+    </style>
+</head>
+<body data-spy="scroll" data-target="#topnav">
+    <section>
+        <div class="container">
+            <div id="main-nav-container">
+                <nav class="navbar navbar-default navbar-fixed-top container" role="navigation" id="topnav">
+                    <div class="container-fluid">
+                        <div class="navbar-header">
+                            <button class="navbar-toggle" type="button" data-toggle="collapse"
+                                    data-target=".bs-js-navbar-scrollspy">
+                                <span class="sr-only">切换导航</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <a class="navbar-brand" href="http://www.lqtec.cn/index.html"><img src="/static/img/lqlogonavt.png" /></a>
+                        </div>
+                        <div class="collapse navbar-collapse bs-js-navbar-scrollspy">
+                            <ul class="nav navbar-nav">
+                                <li id="gridviewid"><a href="#">宫格显示</a></li>
+                                <li id="tableviewid" class="active"><a href="#">列表显示</a></li>
+                                <li><a href="#" onclick="devgetoperaterightfun('all');" title="获取名下设备操作权限">获取操作权限</a></li>
+                            </ul>
+                            <ul class="nav navbar-nav navbar-right">
+                                <li><a href="#"><span class="glyphicon glyphicon-user"></span> <span id='username'>当前用户名</span></a></li>
+                                <li><a href="/webmc/logout/"><span class="glyphicon glyphicon-log-out"></span> 退出登录</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <div id="devicetab">
+                <br />
+                <br />
+                <br />
+                <div class="row">
+                    <div class="col-md-12 text-center section-intro">
+                        <div class="col-md-12 text-center">
+                            <h2><span>设备操作界面</span></h2>
+                        </div>
+                        <div id="devgridview" class="col-md-12">
+                            <div class="table-responsive">
+                                <table class="table table-striped table-bordered table-hover">
+                                    <caption>设备表</caption>
+                                    <thead>
+                                        <tr>
+                                            <th>序号</th>
+                                            <th>设备图标</th>
+                                            <th>设备名称</th>
+                                            <th>生命状态</th>
+                                            <th>运行状态</th>
+                                            <th>运行进度</th>
+                                            <th>日成品数(个)</th>
+                                            <th>日废品数(个)</th>
+                                            <th>日工作时长(时)</th>
+                                            <th>操作</th>
+                                            <!--<th>
+                                                <button class="btn btn-md btn-primary miconbtn" title="获取操作权限" onclick="managerdevgetoperaterightfun()"><span class="glyphicon glyphicon-hand-up"></span><span class="glyphicon  glyphicon-transfer"></span></button>
+                                            </th>-->
+                                        </tr>
+                                    </thead>
+                                    <tbody id="devtableview">
+                                    </tbody>
+                                </table>
+                                <br />
+                                <br />
+                                <br />
+                                <br />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> 
+    <button class="btn btn-primary btn-lg hidden" data-toggle="modal"
+            data-target="#myModal" id="buttonmodel">
+        模态框
+    </button>
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog"
+         aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close"
+                            data-dismiss="modal" aria-hidden="true">
+                        &times;
+                    </button>
+                    <h4 class="modal-title" id="myModaltitleLabel">
+                        模态框标题
+                    </h4>
+                </div>
+                <div class="modal-body" id="myModelBodyDiv">
+                    模态框内容
+                </div>
+                <div class="modal-footer" id="myModalFooter">
+                    <button type="button" class="btn btn-default"
+                            data-dismiss="modal" onclick="clearusermessagefun();">
+                        关闭
+                    </button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal -->
+    </div>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <hr />
+                    <h2><img src="/static/img/lqlogonavt.png" /></h2>
+                    COPYRIGHT © 2016 <a href="http://www.lqtec.cn/index.html" target="_blank" title="朗群智能">杭州朗群智能科技有限公司</a> 保留所有权利.
+                </div>
+            </div>
+        </div>
+        <br /><br />
+    </footer>
+    <script>
+        $(function () {
+            /* removeSection = function(e) {
+                 $(e).parents(".section").remove();
+                 $('[data-spy="scroll"]').each(function () {
+                     var $spy = $(this).scrollspy('refresh')
+                 });
+             }
+             $("#myScrollspy").scrollspy();*/
+        });
+        // $('body').scrollspy({ target: '#topnav' })
+    </script>
+</body>
+
+</html>
+
